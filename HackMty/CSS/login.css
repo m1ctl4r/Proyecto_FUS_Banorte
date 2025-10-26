@@ -1,0 +1,207 @@
+:root {
+    --color-primary: #EB0029;
+    --color-primary-hover: #DB0026; 
+    --color-text-dark: #323648; 
+    --color-text-light: #586670; 
+    --color-input-bg: #F6F6F6; 
+    --color-border: #CFD2D3; 
+    --color-white: #FFFFFF; 
+    --color-error: #E80029; 
+    --color-link: #EB0029; 
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: 'Gotham', Arial, sans-serif; 
+    background-color: var(--color-input-bg);
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.login-container {
+    background: var(--color-white);
+    padding: 35px 40px;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 420px;
+}
+
+.logo img {
+    width: 320px;
+    align-content: center;
+}
+
+h2 {
+    margin-top: 25px;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--color-text-dark);
+    margin-bottom: 25px;
+}
+
+.error-message {
+    background-color: rgba(235, 0, 41, 0.1);
+    color: var(--color-error);
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-text-light); 
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    height: 45px; 
+    background: var(--color-input-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    
+    padding-left: 45px;
+    padding-right: 15px;
+    
+    font-family:'Gotham', Arial, sans-serif; 
+    font-size: 15px; 
+    color: var(--color-text-dark); 
+    transition: all 0.2s ease;
+}
+
+input::placeholder {
+    color: var(--color-text-light);
+    font-weight: 400;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: var(--color-text-dark); 
+    box-shadow: 0 0 0 3px rgba(235, 0, 41, 0.15);
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 12px; 
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    color: var(--color-text-light); 
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    margin-right: 8px;
+    accent-color: var(--color-primary);
+}
+
+.forgot-password {
+    color: var(--color-link);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.button-group input[type="submit"] {
+    width: 100%;
+    height: 45px; 
+    background: var(--color-primary); 
+    border: none;
+    border-radius: 6px;
+    
+    color: var(--color-white); 
+    font-family: 'Gotham', Arial, sans-serif; 
+    font-size: 15px; 
+    font-weight: 500;   
+    
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.button-group input[type="submit"]:hover {
+    background: var(--color-primary-hover); 
+}
+
+
+.register-link {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 14px;
+    color: var(--color-text-light);
+}
+
+.register-link a {
+    color: var(--color-link); 
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+.success-message {
+  background-color: rgba(40, 167, 69, 0.1);
+  color: #28a745;
+  padding: 15px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.toast {
+    visibility: hidden; 
+    position: fixed;    
+    top: 20px;         
+    left: 50%;         
+    
+    transform: translate(-50%, -100px); 
+    
+    background-color: #28a745; 
+    color: var(--color-white);
+    
+    padding: 16px 20px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    
+    font-family: 'Gotham', Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    z-index: 1050; 
+    
+    transition: transform 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+.toast.show {
+    visibility: visible;
+    transform: translate(-50%, 0); 
+}

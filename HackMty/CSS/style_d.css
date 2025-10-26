@@ -1,0 +1,198 @@
+main {
+    padding-top: 120px; /* 80px de la barra + 40px de espacio */
+    padding-bottom: 60px; /* Espacio antes del footer */
+    background: #f8f9fb; /* Fondo gris claro (del reset) */
+}
+
+
+#simulador {
+    max-width: 800px; /* Ancho ideal para un formulario */
+    margin: 0 auto; /* Centrar en la página */
+    background-color: #FFFFFF; /* Fondo blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Sombra sutil */
+    border: 1px solid #E0E0E0; /* Borde ligero */
+    padding: 40px;
+}
+
+
+#simulador h2 {
+    font-family: 'Gotham', Arial, sans-serif;
+    font-size: 2.2rem; /* Aprox 35px, múltiplo de 5 [cite: 14] */
+    font-weight: bold; /* Título [cite: 13] */
+    color: #EB0029; /* Rojo Banorte [cite: 17] */
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#formSimulacion {
+    display: flex;
+    flex-direction: column; /* Apilar los campos */
+    gap: 20px; /* Espacio entre cada campo */
+}
+
+/* --- AJUSTADO AL UI KIT --- */
+#formSimulacion label {
+    font-family: 'Gotham', Arial, sans-serif; /* Gotham [cite: 10] */
+    font-size: 12px; /* Gotham Book: 12px  */
+    font-weight: normal; /* "Book" es peso normal */
+    color: #586670; /* HEX: #586670  */
+    margin-bottom: 5px; /* Espacio entre label e input  */
+}
+
+/* --- AJUSTADO AL UI KIT --- */
+#formSimulacion input[type="number"] {
+    font-family: 'Gotham', Arial, sans-serif; /* Gotham [cite: 10] */
+    font-size: 15px; /* Gotham Medium: 15px  */
+    font-weight: 500; /* Medium */
+    color: #323648; /* HEX: #323648  */
+    background-color: #F6F6F6; /* Color fondo: #F6F6F6  */
+    height: 45px; /* Medida: 45px  */
+    padding: 0 12px; /* Padding interno [cite: 73] */
+    border: 1px solid #F6F6F6; /* Borde sutil */
+    border-radius: 4px; 
+    width: 100%;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* --- AJUSTADO AL UI KIT (Focus) --- */
+#formSimulacion input[type="number"]:focus {
+    outline: none;
+    background-color: #FFFFFF; /* Fondo blanco al seleccionar */
+    border-color: #EB0029; /* Borde Rojo Banorte */
+    box-shadow: 0 0 0 3px rgba(235, 0, 41, 0.1); /* Resplandor */
+}
+
+/* --- AJUSTADO AL UI KIT --- */
+#formSimulacion button[type="submit"] {
+    background-color: #EB0029; /* Color Activo: #EB0029  */
+    color: #FFFFFF; /* Color tipografia: #FFFFFF  */
+    border: none;
+    padding: 12px 25px; 
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 15px; /* Gotham Medium: 15px  */
+    font-family: 'Gotham', Arial, sans-serif;
+    font-weight: 500; /* Gotham Medium  */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    display: block; 
+    width: 100%;
+    margin-top: 10px; 
+}
+
+#formSimulacion button[type="submit"]:hover {
+    background-color: #DB0026; /* Color Hover #DB0026  */
+    transform: scale(1.01); 
+}
+
+
+/* --- SECCIÓN DE RESULTADOS (Estilos genéricos) --- */
+#resultados {
+    margin-top: 40px; 
+    padding-top: 30px;
+    border-top: 2px solid #f0f0f0; 
+}
+
+#resultados h3 {
+    font-family: 'Gotham', Arial, sans-serif;
+    font-size: 1.5rem; /* 24px */
+    font-weight: 500; /* Medium */
+    color: #323648; /* Gris Banorte [cite: 18] */
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+#resultados p {
+    font-size: 1.1rem; /* 18px */
+    color: #5B6670; /* Gris */
+    line-height: 1.6;
+    margin-bottom: 15px;
+    display: flex; 
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+}
+
+#resultados p strong {
+    font-family: 'Gotham', Arial, sans-serif;
+    font-weight: 500; /* Medium */
+    color: #EB0029; /* Rojo Banorte [cite: 17] */
+    font-size: 1.25rem; 
+    padding-left: 15px; 
+}
+
+#resultados p.nota {
+    font-size: 0.9rem; /* 14px */
+    color: #5B6670;
+    text-align: center;
+    background-color: #f8f9fb; 
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 20px;
+    justify-content: center; 
+    line-height: 1.5;
+}
+/* ================================== */
+/* LOGOS DENTRO DEL SIMULADOR     */
+/* ================================== */
+
+/* Este selector (#simulador .top-logo-container)
+  aplica los estilos solo al contenedor de logos
+  que está DENTRO de la tarjeta #simulador.
+*/
+#simulador .top-logo-container {
+    display: flex;
+    justify-content: center; /* Centra los logos horizontalmente */
+    align-items: center;     /* Centra los logos verticalmente */
+    gap: 20px;               /* Espacio entre los dos logos */
+    margin-bottom: 30px;     /* Espacio antes del título "Calcula..." */
+    padding-bottom: 25px;    /* Espacio antes de la línea divisoria */
+    border-bottom: 1px solid #f0f0f0; /* Línea divisoria sutil */
+}
+
+/* Esto ajusta el tamaño de las imágenes 
+  de logo dentro del simulador.
+*/
+#simulador .top-logo {
+    height: 45px; /* Altura de 45px (como los campos de texto) */
+    width: auto;  /* Ancho automático para mantener la proporción */
+}
+
+/* ================================== */
+/* BOTÓN SECUNDARIO (AÑADIDO)     */
+/* ================================== */
+
+.btn-secundario {
+    display: block; /* Ocupa el 100% del ancho */
+    width: 100%;
+    text-align: center;
+    text-decoration: none; /* Quita el subrayado del enlace */
+    cursor: pointer;
+
+    /* --- Medidas (de image_20c0a7.png) --- */
+    height: 45px; /* Altura: 45px */
+    /* Centra el texto verticalmente (45px altura - 2px borde) */
+    line-height: 43px; 
+    border-radius: 4px; /* Medida: 4px */
+
+    /* --- Tipografía (de image_20c02b.png) --- */
+    font-family: 'Gotham', Arial, sans-serif;
+    font-size: 15px; /* Gotham Medium: 15px */
+    font-weight: 500; /* Gotham Medium */
+
+    /* --- Apariencia "Activo" (de image_20c02b.png) --- */
+    background-color: #FFFFFF; /* Fondo blanco */
+    color: #323E48; /* Color Activo: #323E48 */
+    border: 1px solid #323E48; /* Borde gris */
+
+    /* --- Extras --- */
+    margin-top: 25px; /* Espacio para separarlo de la nota */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* --- Apariencia "Hover" (de image_20c02b.png) --- */
+.btn-secundario:hover {
+    background-color: #FFFFFF; /* Fondo sigue blanco */
+    color: #DB0026; /* Color Hover: #DB0026 */
+    border-color: #DB0026; /* Borde rojo en hover */
+}
